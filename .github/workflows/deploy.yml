@@ -1,0 +1,27 @@
+name: Publish docs to website
+on:
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Deploy docs
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v2
+       - uses: actions/setup-python@v2
+         with:
+            python-version: 3.x
+       - run: pip install mkdocs
+       - run: pip install mkdocs-material
+       - run: mkdocs build
+       - uses: garygrossgarten/github-action-scp@release
+         with:
+          local: site
+          remote: ~/docs/content
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.HOST }}
+          password: ${{ secrets.PASSWORD }}
