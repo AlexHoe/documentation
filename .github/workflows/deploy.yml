@@ -11,7 +11,7 @@ jobs:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v2
+       - uses: actions/checkout@v0.1.4
        - uses: actions/setup-python@v2
          with:
             python-version: 3.x
@@ -23,8 +23,8 @@ jobs:
        - uses: appleboy/scp-action@v0.1.4
          with:
           host: ${{ secrets.HOST }}
-          port: ${{ secrets.PORT }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          source: "MkDocs/site/"
+          port: ${{ secrets.PORT }}
+          source: /home/runner/work/documentation/documentation/MkDocs/site/*
           target: /root/docs/content/
