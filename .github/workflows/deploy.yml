@@ -35,6 +35,6 @@ jobs:
           source: "/home/runner/work/documentation/documentation/MkDocs/site/*"
           target: /root/docs/content
        - name: manual scp
-         run:  sshpass -p "${{ secrets.HOST }}" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r -P ${{ secrets.PORT }} /home/runner/work/documentation/documentation/MkDocs/site/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/root/docs/content/
+         run:  sshpass -p "${{ secrets.PASSWORD }}" scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -r -P ${{ secrets.PORT }} /home/runner/work/documentation/documentation/MkDocs/site/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/root/docs/content/
            
       
