@@ -20,11 +20,11 @@ jobs:
          run: pip install mkdocs-material
        - working-directory: ./MkDocs
          run: mkdocs build
-       - uses: garygrossgarten/github-action-scp@release
+       - uses: appleboy/scp-action@v0.1.4
          with:
-          local: .MkDocs/site
-          remote: ~/docs/content
           host: ${{ secrets.HOST }}
           port: 1990
           username: ${{ secrets.HOST }}
           password: ${{ secrets.PASSWORD }}
+          source: ".MkDocs/site"
+          target: ~/docs/content
