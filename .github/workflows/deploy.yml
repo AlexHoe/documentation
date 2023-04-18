@@ -11,13 +11,27 @@ jobs:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-       - uses: actions/checkout@v3
-       - uses: actions/setup-python@v2
+       - name: checkout branch
+         uses: actions/checkout@v3
+       - name: install python
+         uses: actions/setup-python@v2
          with:
-            python-version: 3.x
-       - run: pip install mkdocs
-       - working-directory: ./MkDocs
+           python-version: 3.x
+       - name: install mkdocs
+         run: pip install mkdocs
+       - name: install theme
+         working-directory: ./MkDocs
          run: pip install mkdocs-material
-       - working-directory: ./MkDocs
+       - name: build site
+         working-directory: ./MkDocs
          run: mkdocs build
-       - run: sshpass -p "${{ secrets.PASSWORD }}" scp -r -P 1990 /home/runner/work/documentation/documentation/MkDocs/site/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/root/docs/content/
+       - name: transfer site to server
+         uses: appleboy/scp-action@v0.1.4
+         with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          source: /home/runner/work/documentation/documentation/MkDocs/site
+          target: /root/docs/content/
+      
