@@ -24,7 +24,7 @@ jobs:
          with:
           host: ${{ secrets.HOST }}
           port: ${{ secrets.PORT }}
-          username: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           source: "MkDocs/site/"
           target: /root/docs/content/
