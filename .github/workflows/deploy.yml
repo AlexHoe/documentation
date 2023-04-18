@@ -20,10 +20,9 @@ jobs:
          run: pip install mkdocs-material
        - working-directory: ./MkDocs
          run: mkdocs build
-       - working-directory: ./MkDocs
-         uses: garygrossgarten/github-action-scp@release
+       - uses: garygrossgarten/github-action-scp@release
          with:
-          local: site
+          local: .MkDocs/site
           remote: ~/docs/content
           host: ${{ secrets.HOST }}
           username: ${{ secrets.HOST }}
