@@ -16,8 +16,10 @@ jobs:
          with:
             python-version: 3.x
        - run: pip install mkdocs
-       - run: pip install mkdocs-material
-       - run: mkdocs build
+       - working-directory: ./MkDocs
+         run: pip install mkdocs-material
+       - working-directory: ./MkDocs
+         run: mkdocs build
        - uses: garygrossgarten/github-action-scp@release
          with:
           local: site
