@@ -32,6 +32,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          source: "/home/runner/work/documentation/documentation/MkDocs/site/*"
-          target: /root/docs/content/
+          source: "/home/runner/work/documentation/documentation/MkDocs/site"
+          target: /root/docs/content
       
