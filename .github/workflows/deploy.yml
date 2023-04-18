@@ -25,5 +25,6 @@ jobs:
           local: .MkDocs/site
           remote: ~/docs/content
           host: ${{ secrets.HOST }}
+          port: 1990
           username: ${{ secrets.HOST }}
           password: ${{ secrets.PASSWORD }}
