@@ -25,6 +25,8 @@ jobs:
        - name: build site
          working-directory: ./MkDocs
          run: mkdocs build
+       - name: show content
+         run: ls -la /home/runner/work/documentation/documentation/MkDocs/site
        - name: transfer site to server
          uses: appleboy/scp-action@v0.1.4
          with:
