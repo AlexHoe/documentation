@@ -23,8 +23,8 @@ jobs:
        - uses: appleboy/scp-action@v0.1.4
          with:
           host: ${{ secrets.HOST }}
-          port: 1990
+          port: ${{ secrets.PORT }}
           username: ${{ secrets.HOST }}
           password: ${{ secrets.PASSWORD }}
-          source: ".MkDocs/site"
-          target: ~/docs/content
+          source: "MkDocs/site/"
+          target: /root/docs/content/
