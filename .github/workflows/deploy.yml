@@ -34,3 +34,4 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "/home/runner/work/documentation/documentation/MkDocs/site/*"
           target: /local/docker/docs/content
+          overwrite: true
