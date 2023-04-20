@@ -6,6 +6,8 @@ nav:
       - traefik: traefik.md
       - Ansible: ansible.md 
       - K8S: kube.md
+  - Tools: 
+      - LaTeX: latex.md
   - Help: help.md
 
 theme: 
