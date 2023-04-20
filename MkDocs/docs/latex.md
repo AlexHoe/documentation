@@ -47,7 +47,7 @@
   ```
 - Author
   ```tex
-  \author{Alexander Hoellerer}
+  \author{Alex}
   ```
 - Date
   ```tex

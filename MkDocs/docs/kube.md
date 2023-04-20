@@ -1,7 +1,7 @@
 # Kubernetes   
 
-## Grundlagen
-- Pod: Besteht aus einem oder mehreren Containern die sich den Netzwerk-Namespace teilen. 
+## Basics
+- Pod: One or more containers sharing the network namespace. 
 
 ## Pod
 - YAML:
@@ -10,28 +10,28 @@
 # Header
 apiVersion: v1
 kind: Pod
-# Informationen über die Resource
+# information about the resource
 metadata: 
 	name: nginx
-# Spezifikation der Ressource
+# specifications of of the resource 
 spec:
 	containers:
 	- name: nginx
 	  image: nginx:1.19
 ```
-- Pod starten:
+- start pod:
 ```bash
 kubectl apply -f pod.yaml
 ```
-- Pods anzeigen: 
+- show pods: 
 ```bash
 kubectl get pods
 ```
-- Informationen zu einem Pod ausgeben:
+- Show information of a pod:
 ```bash
 kubectl describe pod nginx
 ```
-- Pod löschen:
+- delete pod:
 ```bash
 kubectl delete pod nginx
 ```
