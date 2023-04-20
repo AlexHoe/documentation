@@ -1,6 +1,11 @@
 site_name: Wiki
 nav: 
   - Home: index.md
+  - Administration: 
+      - Webserver: webserver.md
+      - traefik: traefik.md
+      - Ansible: ansible.md 
+      - K8S: kube.md
   - Help: help.md
 
 theme: 
