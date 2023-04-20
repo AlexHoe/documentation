@@ -1,2 +1,2 @@
 # Welcome
-test
+Welcome to the documentation. 

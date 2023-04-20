@@ -57,7 +57,7 @@ certificatesResolvers:
 # Staging resolver to test new configurations (not trusted!)
   staging:      
     acme:
-      email: alex@hoellerer.one
+      email: my@address.com
       storage: /ssl-certs/acme.json
       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
       httpChallenge:
@@ -65,7 +65,7 @@ certificatesResolvers:
 # Trusted certificates
   production:
     acme:
-      email: alex@hoellerer.one
+      email: my@address.com
       storage: /ssl-certs/acme.json
       caServer: "https://acme-v02.api.letsencrypt.org/directory"
       httpChallenge:
@@ -85,7 +85,7 @@ labels:
       - "traefik.enable=true"
       # "cloud" is the name of the router and can be set randomly
       # Host has to be the subdomain for the service
-      - "traefik.http.routers.cloud.rule=Host(`cloud.hoellerer.one`)"
+      - "traefik.http.routers.cloud.rule=Host(`cloud.mydomain.com`)"
       # websecure to use https
       - "traefik.http.routers.cloud.entrypoints=websecure"
       - "traefik.http.routers.cloud.tls=true"
