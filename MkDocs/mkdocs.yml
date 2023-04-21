@@ -6,6 +6,8 @@ nav:
       - traefik: traefik.md
       - Ansible: ansible.md 
       - K8S: kube.md
+  - DevOps:
+      - GitLab CI/CD: gitlabcicd.md
   - Tools: 
       - LaTeX: latex.md
   - Help: help.md
