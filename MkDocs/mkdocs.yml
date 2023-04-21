@@ -8,6 +8,9 @@ nav:
       - K8S: kube.md
   - DevOps:
       - GitLab CI/CD: gitlabcicd.md
+  - Windows:
+      - Command Reference: commands.md
+      - Powershell: pwsh.md
   - Tools: 
       - LaTeX: latex.md
   - Help: help.md
