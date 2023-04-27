@@ -6,11 +6,34 @@ nav:
       - traefik: traefik.md
       - Ansible: ansible.md 
       - K8S: kube.md
+  - Linux: 
+      - Command Reference: linux_commands.md
+      - Installation: linux_installation.md
+      - Filesystem: linux_filesystem.md
+      - Bash: bash.md
+      - Shell-Scripting: shell-scripting.md
+      - Process Management: process_management.md
+      - Graphics and Text Converter: linux_converter.md
+      - Network: linux_network.md
+      - Backup: backup.md
+      - Kernel: linux_kernel.md
   - DevOps:
       - GitLab CI/CD: gitlabcicd.md
+      - Docker: docker.md
   - Windows:
-      - Command Reference: commands.md
+      - Command Reference: windows_commands.md
       - Powershell: pwsh.md
+  - Coding:
+      - git: git.md
+      - HTML: html.md
+      - CSS: css.md
+      - Python: python.md
+  - Security: 
+      - Tools: sec_tools.md
+      - E-Mail: sec_mails.md
+      - Enumeration: sec_enum.md
+      - Gather Information: sec_gather.md
+      - Links: sec_links.md
   - Tools: 
       - LaTeX: latex.md
   - Help: help.md
