@@ -7,7 +7,6 @@ nav:
       - Ansible: ansible.md 
       - K8S: kube.md
   - Linux: 
-      - Command Reference: linux_commands.md
       - Installation: linux_installation.md
       - Filesystem: linux_filesystem.md
       - Bash: bash.md
@@ -17,6 +16,7 @@ nav:
       - Network: linux_network.md
       - Backup: backup.md
       - Kernel: linux_kernel.md
+      - Command Reference: linux_commands.md
   - DevOps:
       - GitLab CI/CD: gitlabcicd.md
       - Docker: docker.md
